@@ -2,12 +2,12 @@ import React from "react";
 import { useFetchPosts } from "@/services/post";
 import "./post.css";
 
-function PostList() {
+function PostsList() {
   const { isLoading, posts } = useFetchPosts();
 
   return (
     <div className="post-container">
-      <h1 className="post-title">Post List</h1>
+      <h1 className="post-title">Posts List</h1>
 
       {isLoading ? (
         <div className="spinner-wrapper">
@@ -28,4 +28,4 @@ function PostList() {
   );
 }
 
-export default PostList;
+export default PostsList;
