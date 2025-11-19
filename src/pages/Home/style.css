@@ -1,0 +1,29 @@
+.home-container {
+  display: flex;
+  gap: 16px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.home-btn {
+  padding: 12px 22px;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.25s;
+  border: 1px solid transparent;
+}
+
+.home-btn:hover {
+  background: white;
+  color: #3498db;
+  border-color: #3498db;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.35);
+}
+
+.home-btn.active {
+  background: #2c82c9;
+}

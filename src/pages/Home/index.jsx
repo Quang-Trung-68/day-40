@@ -1,24 +1,18 @@
 import React from "react";
-import { useFetchProducts } from "@/services/product";
+import { NavLink } from "react-router";
+import "./style.css";
 
 function Home() {
-  const { isLoading, products } = useFetchProducts();
-
   return (
-    <>
-      <h1>Home</h1>
-      <ul>
-        {!isLoading ? (
-          products.map((product) => (
-            <li key={product.id}>
-              {product.id} - {product.title} - {product.price}
-            </li>
-          ))
-        ) : (
-          <div>Loading...</div>
-        )}
-      </ul>
-    </>
+    <div className="home-container">
+      <NavLink to="/users" className="home-btn">
+        Users List
+      </NavLink>
+
+      <NavLink to="/posts" className="home-btn">
+        Posts List
+      </NavLink>
+    </div>
   );
 }
 
